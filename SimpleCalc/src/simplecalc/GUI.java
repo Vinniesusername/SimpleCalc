@@ -398,7 +398,12 @@ public class GUI extends javax.swing.JFrame {
                 resultField.setText(String.valueOf(num1 * num2));
                 break;
             case(3):
-                resultField.setText(String.valueOf(num1 / num2));
+                if(num2 == 0)
+                {
+                    resultField.setText("Divde by Zero - Error. Clear and try again");
+                }
+                else
+                    resultField.setText(String.valueOf(num1 / num2));
                 break;
             case(4):
                 resultField.setText(String.valueOf(Math.pow(num1, num2)));
