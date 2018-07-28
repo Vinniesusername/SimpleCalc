@@ -370,7 +370,7 @@ public class GUI extends javax.swing.JFrame {
     }//GEN-LAST:event_addButtonActionPerformed
 
     private void equalsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalsButtonActionPerformed
-       if(mode == 5 || mode == 6 || mode == 7)
+       if(mode == 5 || mode == 6 || mode == 7 || mode == 8 || mode ==9)
        {
            num2 = 0;
        }
