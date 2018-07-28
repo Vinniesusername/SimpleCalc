@@ -57,6 +57,7 @@ public class GUI extends javax.swing.JFrame {
         rootButton = new javax.swing.JButton();
         lnButton = new javax.swing.JButton();
         logButton = new javax.swing.JButton();
+        expressionLabel = new javax.swing.JLabel();
 
         jButton2.setText("jButton2");
 
@@ -261,9 +262,9 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(minusButton)
                         .addGap(14, 14, 14)
                         .addComponent(multiButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(divideButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(14, 14, 14)
                         .addComponent(equalsButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -311,20 +312,23 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(oneButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(sevenButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(zeroButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+            .addComponent(expressionLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(resultField, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(expressionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(addButton)
                     .addComponent(minusButton)
                     .addComponent(multiButton)
                     .addComponent(divideButton)
-                    .addComponent(equalsButton)
-                    .addComponent(addButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                    .addComponent(equalsButton))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(exptButton)
                     .addComponent(sinButton)
@@ -363,6 +367,7 @@ public class GUI extends javax.swing.JFrame {
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
 
         num1 = Double.parseDouble(resultField.getText());
+        expressionLabel.setText(expressionLabel.getText() + "+");
         resultField.setText("");
         mode = 0;
         
@@ -419,63 +424,78 @@ public class GUI extends javax.swing.JFrame {
 
     private void threeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeButtonActionPerformed
         resultField.setText(resultField.getText() + "3");
+        expressionLabel.setText(expressionLabel.getText() + "3");
     }//GEN-LAST:event_threeButtonActionPerformed
 
     private void zeroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroButtonActionPerformed
         resultField.setText(resultField.getText() + "0");
+        expressionLabel.setText(expressionLabel.getText() + "0");
     }//GEN-LAST:event_zeroButtonActionPerformed
 
     private void nineButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineButtonActionPerformed
         resultField.setText(resultField.getText() + "9");
+        expressionLabel.setText(expressionLabel.getText() + "9");
     }//GEN-LAST:event_nineButtonActionPerformed
 
     private void eightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightButtonActionPerformed
        resultField.setText(resultField.getText() + "8");
+       expressionLabel.setText(expressionLabel.getText() + "8");
     }//GEN-LAST:event_eightButtonActionPerformed
 
     private void sevenButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenButtonActionPerformed
         resultField.setText(resultField.getText() + "7");
+        expressionLabel.setText(expressionLabel.getText() + "7");
     }//GEN-LAST:event_sevenButtonActionPerformed
 
     private void sixButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixButtonActionPerformed
         resultField.setText(resultField.getText() + "6");
+        expressionLabel.setText(expressionLabel.getText() + "6");
     }//GEN-LAST:event_sixButtonActionPerformed
 
     private void fiveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveButtonActionPerformed
         resultField.setText(resultField.getText() + "5");
+        expressionLabel.setText(expressionLabel.getText() + "5");
     }//GEN-LAST:event_fiveButtonActionPerformed
 
     private void fourButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourButtonActionPerformed
         resultField.setText(resultField.getText() + "4");
+        expressionLabel.setText(expressionLabel.getText() + "4");
     }//GEN-LAST:event_fourButtonActionPerformed
 
     private void twoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoButtonActionPerformed
         resultField.setText(resultField.getText() + "2");
+        expressionLabel.setText(expressionLabel.getText() + "2");
     }//GEN-LAST:event_twoButtonActionPerformed
 
     private void oneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneButtonActionPerformed
        resultField.setText(resultField.getText() + "1");
+       expressionLabel.setText(expressionLabel.getText() + "1");
     }//GEN-LAST:event_oneButtonActionPerformed
 
     private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
         resultField.setText("");
+        expressionLabel.setText("");
+        num1 =0; num2 =0; mode = -1;
     }//GEN-LAST:event_clearButtonActionPerformed
 
     private void minusButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusButtonActionPerformed
         num1 = Double.parseDouble(resultField.getText());
         resultField.setText("");
+        expressionLabel.setText(expressionLabel.getText() + "- ");
         mode = 1;
     }//GEN-LAST:event_minusButtonActionPerformed
 
     private void multiButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiButtonActionPerformed
         num1 = Double.parseDouble(resultField.getText());
         resultField.setText("");
+        expressionLabel.setText(expressionLabel.getText() + "* ");
         mode = 2;
     }//GEN-LAST:event_multiButtonActionPerformed
 
     private void divideButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideButtonActionPerformed
         num1 = Double.parseDouble(resultField.getText());
         resultField.setText("");
+        expressionLabel.setText(expressionLabel.getText() + "/ ");
         mode = 3;
     }//GEN-LAST:event_divideButtonActionPerformed
 
@@ -486,33 +506,39 @@ public class GUI extends javax.swing.JFrame {
     private void exptButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exptButtonActionPerformed
         num1 = Double.parseDouble(resultField.getText());
         resultField.setText("");
+        expressionLabel.setText( expressionLabel.getText() + "^");
         mode = 4;
     }//GEN-LAST:event_exptButtonActionPerformed
 
     private void sinButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinButtonActionPerformed
         num1 = Double.parseDouble(resultField.getText());
         resultField.setText("");
+        expressionLabel.setText("sin(" + num1 + ")");
         mode = 5;
     }//GEN-LAST:event_sinButtonActionPerformed
 
     private void cosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosButtonActionPerformed
         num1 = Double.parseDouble(resultField.getText());
         resultField.setText("");
+        expressionLabel.setText("cos(" + num1 + ")");
         mode = 6;
     }//GEN-LAST:event_cosButtonActionPerformed
 
     private void decButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_decButtonActionPerformed
         resultField.setText(resultField.getText() + ".");
+        expressionLabel.setText(expressionLabel.getText() + resultField.getText());
     }//GEN-LAST:event_decButtonActionPerformed
 
     private void negateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negateButtonActionPerformed
         num1 = Double.parseDouble(resultField.getText()) * -1;
         resultField.setText(String.valueOf(num1));
+        expressionLabel.setText(resultField.getText());
     }//GEN-LAST:event_negateButtonActionPerformed
 
     private void rootButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rootButtonActionPerformed
         num1 = Double.parseDouble(resultField.getText());
         resultField.setText("");
+        expressionLabel.setText("sqrt(" + num1 + ")");
         mode = 7;  
     }//GEN-LAST:event_rootButtonActionPerformed
 
@@ -530,6 +556,8 @@ public class GUI extends javax.swing.JFrame {
         mode = 8;
         num1 = Double.parseDouble(resultField.getText());
         resultField.setText("");
+        expressionLabel.setText("log(" + num1 + ")");
+        
 
     }//GEN-LAST:event_logButtonActionPerformed
 
@@ -537,6 +565,7 @@ public class GUI extends javax.swing.JFrame {
         mode = 9;
         num1 = Double.parseDouble(resultField.getText());
         resultField.setText("");
+        expressionLabel.setText("ln(" + num1 + ")");
 
     }//GEN-LAST:event_lnButtonActionPerformed
 
@@ -583,6 +612,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton divideButton;
     private javax.swing.JButton eightButton;
     private javax.swing.JButton equalsButton;
+    private javax.swing.JLabel expressionLabel;
     private javax.swing.JButton exptButton;
     private javax.swing.JButton fiveButton;
     private javax.swing.JButton fourButton;
