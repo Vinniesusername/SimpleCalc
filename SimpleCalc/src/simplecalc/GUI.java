@@ -517,7 +517,9 @@ public class GUI extends javax.swing.JFrame {
             break;
          case(9):
             resultField.setText(String.valueOf(Math.log(num1)));
-      
+            break;
+         default:
+             resultField.setText("Error: mode =" + mode);      
              
       }
    }                                            
@@ -674,6 +676,7 @@ public class GUI extends javax.swing.JFrame {
    private void CEActionPerformed(java.awt.event.ActionEvent evt) {                                   
        
       num2 = 0;
+      mode = -1;
       resultField.setText(String.valueOf(num1));
       if ((num1  == (int)num1))     {//If integer
             
