@@ -429,11 +429,11 @@ public class GUI extends javax.swing.JFrame {
       resultField.setText("");
      
       double sum;
-      sum = num1+num2;
+      
       switch(mode)
       {
          case(0):
-         
+            sum = num1+num2;
             
          
             if ((num1 == (int)num1) &&(num2 == (int)num2 ))   {//If integers
@@ -450,19 +450,56 @@ public class GUI extends javax.swing.JFrame {
            
             break;
          case(1):
-            resultField.setText(String.valueOf(num1 - num2));
+         
+            sum = num1-num2;
+            
+            
+            if ((num1 == (int)num1) &&(num2 == (int)num2 ))   { 
+            
+               resultField.setText(String.valueOf((int)sum));   
+            } 
+            
+            else{
+               resultField.setText(String.valueOf(sum));
+            }
+            
+             
             break;
          case(2):
-            resultField.setText(String.valueOf(num1 * num2));
+            sum = num1*num2;
+            
+            if ((num1 == (int)num1) &&(num2 == (int)num2 ))   { 
+            
+               resultField.setText(String.valueOf((int)sum));   
+            } 
+            
+            else{
+               resultField.setText(String.valueOf(sum));
+            }
+            
             break;
          case(3):
+            sum = num1/num2;
             if(num2 == 0)
             {
-               resultField.setText("Divde by Zero - Error. Clear and try again");
+               resultField.setText("Divide by Zero - Error. Clear and try again");
+               break;
             }
-            else
-               resultField.setText(String.valueOf(num1 / num2));
+            
+            if  (sum- (int)sum == 0)  { //If answer is an integer
+            
+               resultField.setText(String.valueOf((int)sum));   
+            } 
+            
+            else{
+               resultField.setText(String.valueOf(sum));
+            }
+            
+            
+         
             break;
+            
+            
          case(4):
             resultField.setText(String.valueOf(Math.pow(num1, num2)));
             break;
@@ -721,4 +758,3 @@ public class GUI extends javax.swing.JFrame {
    private javax.swing.JButton zeroButton;
    // End of variables declaration                   
 }
-
