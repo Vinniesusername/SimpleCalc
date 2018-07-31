@@ -674,7 +674,7 @@ public class GUI extends javax.swing.JFrame {
    private void CEActionPerformed(java.awt.event.ActionEvent evt) {                                   
        
       num2 = 0;
-      resultField.setText("");
+      resultField.setText(String.valueOf(num1));
       if ((num1  == (int)num1))     {//If integer
             
           
