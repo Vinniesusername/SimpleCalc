@@ -519,7 +519,7 @@ public class GUI extends javax.swing.JFrame {
             resultField.setText(String.valueOf(Math.log(num1)));
             break;
          default:
-             resultField.setText("Error: mode =" + mode);      
+             resultField.setText("Error: mode = " + mode);      
              
       }
    }                                            
