@@ -1,4 +1,4 @@
-package simplecalc;
+ package simplecalc;
 
 import java.awt.event.KeyEvent;
 
@@ -501,8 +501,23 @@ public class GUI extends javax.swing.JFrame {
             
             
          case(4):
-            resultField.setText(String.valueOf(Math.pow(num1, num2)));
+            
+         
+         
+            sum = (Math.pow(num1, num2));
+            if (((num1  == (int)num1))  && ((num2  == (int)num2)))  {//If integer
+            
+                
+               resultField.setText(String.valueOf((int)sum));        
+            
+            }
+            else
+            {
+            
+            resultField.setText(""+ sum +"");
+            }
             break;
+            
          case(5):
             resultField.setText(String.valueOf(Math.sin(num1)));
             break;
@@ -510,7 +525,22 @@ public class GUI extends javax.swing.JFrame {
             resultField.setText(String.valueOf(Math.cos(num1)));
             break;
          case(7):
-            resultField.setText(String.valueOf(Math.sqrt(num1)));
+         
+         
+            sum = (Math.sqrt(num1));
+            if (((num1  == (int)num1))  && ((sum  == (int)sum)))  {//If integer
+               sum = (int)sum;
+                
+               resultField.setText(String.valueOf((int)sum));        
+            System.out.println("T"+(int)sum);
+            }
+            else
+            {
+            
+               resultField.setText(""+ sum +"");
+            
+            }
+          
             break;
          case(8):
             resultField.setText(String.valueOf(Math.log10(num1)));
@@ -519,7 +549,7 @@ public class GUI extends javax.swing.JFrame {
             resultField.setText(String.valueOf(Math.log(num1)));
             break;
          default:
-             resultField.setText("Error: mode = " + mode);      
+            resultField.setText("Error: mode = " + mode);      
              
       }
    }                                            
@@ -633,17 +663,55 @@ public class GUI extends javax.swing.JFrame {
    
    }                                         
 
-   private void negateButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
-      num1 = Double.parseDouble(resultField.getText()) * -1;
-      resultField.setText(String.valueOf(num1));
-      expressionLabel.setText(resultField.getText());
+
+   private void negateButtonActionPerformed(java.awt.event.ActionEvent evt) {
+   
+   
+      num1 = Double.parseDouble(resultField.getText());
+      num1 = num1 * (-1);
+   
+     
+      if ((num1  == (int)num1))     {//If integer
+          
+         num1 = ((int)num1);
+                      
+         expressionLabel.setText(""+((int)num1)+"" );
+         resultField.setText(""+((int)num1)+"" ); 
+      }
+      
+      else
+      {
+      
+         num1 = Double.parseDouble(resultField.getText()) * -1;
+         resultField.setText(""+ num1+ "");
+         expressionLabel.setText(""+ num1 +"" );
+         expressionLabel.setText(resultField.getText());
+      }                                             
+    
+      
+      
+      
+      
    }                                            
 
-   private void rootButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
+   private void rootButtonActionPerformed(java.awt.event.ActionEvent evt) { 
+                                             
       num1 = Double.parseDouble(resultField.getText());
-      resultField.setText("");
-      expressionLabel.setText("sqrt(" + num1 + ")");
-      mode = 7;  
+      if( num1 == (int)num1)
+      {
+         num1 = (int)num1;
+         expressionLabel.setText("sqrt(" + (int)num1 + ")");
+         resultField.setText("");
+         mode = 7; 
+         
+      }
+      else{
+       
+         resultField.setText("");
+         
+         expressionLabel.setText("sqrt(" + num1 + ")");
+         mode = 7;  
+      }
    }                                          
 
    private void formKeyPressed(java.awt.event.KeyEvent evt) {                                
@@ -677,18 +745,18 @@ public class GUI extends javax.swing.JFrame {
        
       num2 = 0;
       mode = -1;
-      resultField.setText(String.valueOf(num1));
+     
       if ((num1  == (int)num1))     {//If integer
             
-          
          expressionLabel.setText(""+(int)num1+"" );
+         resultField.setText(String.valueOf((int)num1));
       }
       
       else
       {
       
-      
          expressionLabel.setText(""+num1+"" );
+         resultField.setText(String.valueOf(num1));
       }
       
    }                                  
