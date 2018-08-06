@@ -532,7 +532,7 @@ public class GUI extends javax.swing.JFrame {
                sum = (int)sum;
                 
                resultField.setText(String.valueOf((int)sum));        
-            System.out.println("T"+(int)sum);
+             
             }
             else
             {
