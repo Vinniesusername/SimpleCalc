@@ -1,4 +1,4 @@
- package simplecalc;
+package simplecalc;
 
 import java.awt.event.KeyEvent;
 
@@ -10,7 +10,8 @@ import java.awt.event.KeyEvent;
 
 /**
  *
- * @author Vinnie
+ * @Primary author Vinnie
+ * @author Msukan
  */
 public class GUI extends javax.swing.JFrame {
 
@@ -410,10 +411,7 @@ public class GUI extends javax.swing.JFrame {
       num1 = Double.parseDouble(resultField.getText());
       expressionLabel.setText(expressionLabel.getText() + "+");
       resultField.setText("");
-      mode = 0;
-      
-   
-      
+      mode = 0;   
    }                                         
 
    private void equalsButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
@@ -435,42 +433,32 @@ public class GUI extends javax.swing.JFrame {
          case(0):
             sum = num1+num2;
             
-         
             if ((num1 == (int)num1) &&(num2 == (int)num2 ))   {//If integers
-            
-               resultField.setText(String.valueOf((int)sum));//Result is integer
-              
+            resultField.setText(String.valueOf((int)sum));//Result is integer
             } 
-            
             
             else{
                resultField.setText(String.valueOf(sum));
             }
-         
            
             break;
          case(1):
-         
-            sum = num1-num2;
-            
+         sum = num1-num2;
             
             if ((num1 == (int)num1) &&(num2 == (int)num2 ))   { 
-            
-               resultField.setText(String.valueOf((int)sum));   
+            resultField.setText(String.valueOf((int)sum));   
             } 
             
             else{
                resultField.setText(String.valueOf(sum));
             }
             
-             
             break;
          case(2):
             sum = num1*num2;
             
             if ((num1 == (int)num1) &&(num2 == (int)num2 ))   { 
-            
-               resultField.setText(String.valueOf((int)sum));   
+            resultField.setText(String.valueOf((int)sum));   
             } 
             
             else{
@@ -487,33 +475,24 @@ public class GUI extends javax.swing.JFrame {
             }
             
             if  (sum- (int)sum == 0)  { //If answer is an integer
-            
-               resultField.setText(String.valueOf((int)sum));   
+            resultField.setText(String.valueOf((int)sum));   
             } 
             
             else{
                resultField.setText(String.valueOf(sum));
             }
             
-            
-         
             break;
-            
-            
+                  
          case(4):
             
          
-         
             sum = (Math.pow(num1, num2));
             if (((num1  == (int)num1))  && ((num2  == (int)num2)))  {//If integer
-            
-                
-               resultField.setText(String.valueOf((int)sum));        
-            
+                resultField.setText(String.valueOf((int)sum));        
             }
             else
             {
-            
             resultField.setText(""+ sum +"");
             }
             break;
@@ -530,18 +509,13 @@ public class GUI extends javax.swing.JFrame {
             sum = (Math.sqrt(num1));
             if (((num1  == (int)num1))  && ((sum  == (int)sum)))  {//If integer
                sum = (int)sum;
-                
-               resultField.setText(String.valueOf((int)sum));        
-             
+            resultField.setText(String.valueOf((int)sum));        
             }
             else
             {
-            
-               resultField.setText(""+ sum +"");
-            
+            resultField.setText(""+ sum +"");
             }
-          
-            break;
+          break;
          case(8):
             resultField.setText(String.valueOf(Math.log10(num1)));
             break;
@@ -550,8 +524,7 @@ public class GUI extends javax.swing.JFrame {
             break;
          default:
             resultField.setText("Error: mode = " + mode);      
-             
-      }
+          }
    }                                            
 
    private void threeButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
@@ -659,8 +632,6 @@ public class GUI extends javax.swing.JFrame {
    private void decButtonActionPerformed(java.awt.event.ActionEvent evt) {                                          
       resultField.setText(resultField.getText() + ".");
       expressionLabel.setText(expressionLabel.getText()+"." );
-      
-   
    }                                         
 
 
@@ -670,8 +641,7 @@ public class GUI extends javax.swing.JFrame {
       num1 = Double.parseDouble(resultField.getText());
       num1 = num1 * (-1);
    
-     
-      if ((num1  == (int)num1))     {//If integer
+   if ((num1  == (int)num1))     {//If integer
           
          num1 = ((int)num1);
                       
@@ -681,18 +651,12 @@ public class GUI extends javax.swing.JFrame {
       
       else
       {
-      
-         num1 = Double.parseDouble(resultField.getText()) * -1;
+      num1 = Double.parseDouble(resultField.getText()) * -1;
          resultField.setText(""+ num1+ "");
          expressionLabel.setText(""+ num1 +"" );
          expressionLabel.setText(resultField.getText());
       }                                             
-    
-      
-      
-      
-      
-   }                                            
+    }                                            
 
    private void rootButtonActionPerformed(java.awt.event.ActionEvent evt) { 
                                              
@@ -708,8 +672,7 @@ public class GUI extends javax.swing.JFrame {
       else{
        
          resultField.setText("");
-         
-         expressionLabel.setText("sqrt(" + num1 + ")");
+      expressionLabel.setText("sqrt(" + num1 + ")");
          mode = 7;  
       }
    }                                          
@@ -720,7 +683,6 @@ public class GUI extends javax.swing.JFrame {
          num1 = Double.parseDouble(resultField.getText());
          resultField.setText("");
          mode = 0;
-         
       }
    }                               
 
@@ -729,16 +691,14 @@ public class GUI extends javax.swing.JFrame {
       num1 = Double.parseDouble(resultField.getText());
       resultField.setText("");
       expressionLabel.setText("log(" + num1 + ")");
-      
-   
-   }                                         
+   }   
+                                            
 
    private void lnButtonActionPerformed(java.awt.event.ActionEvent evt) {                                         
       mode = 9;
       num1 = Double.parseDouble(resultField.getText());
       resultField.setText("");
       expressionLabel.setText("ln(" + num1 + ")");
-   
    }                                        
 
    private void CEActionPerformed(java.awt.event.ActionEvent evt) {                                   
@@ -754,8 +714,7 @@ public class GUI extends javax.swing.JFrame {
       
       else
       {
-      
-         expressionLabel.setText(""+num1+"" );
+      expressionLabel.setText(""+num1+"" );
          resultField.setText(String.valueOf(num1));
       }
       
