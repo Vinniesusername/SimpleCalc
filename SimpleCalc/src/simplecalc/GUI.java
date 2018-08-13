@@ -630,8 +630,17 @@ public class GUI extends javax.swing.JFrame {
    }                                         
 
    private void decButtonActionPerformed(java.awt.event.ActionEvent evt) {                                          
+      boolean flag = true;
+      for(int i = 0; i < resultField.getText().length(); i++)
+      {
+          if(resultField.getText().charAt(i) == '.')
+              flag = false;
+      }
+      if(flag)
+      {
       resultField.setText(resultField.getText() + ".");
       expressionLabel.setText(expressionLabel.getText()+"." );
+      }
    }                                         
 
 
